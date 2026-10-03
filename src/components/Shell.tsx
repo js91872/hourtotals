@@ -1,0 +1,4 @@
+import Link from "next/link";
+export function Header(){return <header className="header"><div className="wrap nav"><Link className="brand" href="/"><span className="logo">◷</span><span>HourTotals</span></Link><nav><Link href="/hours-calculator">Hours</Link><Link href="/time-card-calculator">Time Card</Link><Link href="/clock-out-time-calculator">Clock Out</Link></nav></div></header>}
+export function Hero({title,intro,tag="Free online calculator"}:{title:string;intro:string;tag?:string}){return <section className="hero"><div className="wrap"><span className="pill">{tag}</span><h1>{title}</h1><p>{intro}</p></div></section>}
+export function Footer(){return <footer><div className="wrap foot"><b>HourTotals</b><span>Fast, free time calculators. No account required.</span><span>Calculation tool only — not payroll or legal advice.</span></div></footer>}
