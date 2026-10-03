@@ -60,3 +60,5 @@ h1{color:var(--blue)!important}
   .brandText strong{font-size:26px}
   .toolsMenu summary{padding:10px;font-size:13px}
 }
+
+.inputWarning{display:block;margin-top:3px;font-size:10px;font-weight:750;color:#a13d2d;white-space:nowrap}@media(max-width:580px){.inputWarning{font-size:12px}}
