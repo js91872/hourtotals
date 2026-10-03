@@ -1,0 +1,3 @@
+import type {ReactNode} from "react";import {Footer,Header} from "@/components/Shell";
+export type Info={title:string;desc:string;body:ReactNode};
+export function InfoLayout({page}:{page:Info}){return <><Header/><main className="infoMain"><div className="wrap infoWrap"><span className="sectionKicker">HOURTOTALS</span><h1>{page.title}</h1><p className="infoLead">{page.desc}</p><article className="infoArticle">{page.body}</article></div></main><Footer/></>}
