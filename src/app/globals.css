@@ -34,3 +34,13 @@ h1{color:var(--blue)!important}
   .footerGrid>div:first-child>p{font-size:14px}.footerGrid b{font-size:14px}.footerGrid a:not(.brand){font-size:13px}
   .footerTrust span{font-size:11px}.footerBottom{font-size:12px;line-height:1.5}
 }
+
+/* Mobile header brand scale */
+@media(max-width:580px){
+  .header{height:78px}
+  .brand{gap:10px}
+  .brandMark{width:44px;height:44px;flex:0 0 44px}
+  .brandText strong{font-size:25px;letter-spacing:-.035em}
+  .toolsMenu summary{padding:10px 12px;font-size:14px}
+  .toolsDropdown{top:76px}
+}
