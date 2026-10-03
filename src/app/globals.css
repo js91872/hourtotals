@@ -44,3 +44,19 @@ h1{color:var(--blue)!important}
   .toolsMenu summary{padding:10px 12px;font-size:14px}
   .toolsDropdown{top:76px}
 }
+
+/* Mobile header brand presence — tuned from device screenshot */
+@media(max-width:580px){
+  .header{height:82px}
+  .nav{gap:10px}
+  .brand{gap:9px;min-width:0}
+  .brandMark{width:52px;height:52px;flex:0 0 52px}
+  .brandText strong{font-size:29px;font-weight:850;line-height:1;letter-spacing:-.045em}
+  .toolsMenu summary{padding:11px 12px;font-size:14px}
+  .toolsDropdown{top:80px}
+}
+@media(max-width:380px){
+  .brandMark{width:47px;height:47px;flex-basis:47px}
+  .brandText strong{font-size:26px}
+  .toolsMenu summary{padding:10px;font-size:13px}
+}
