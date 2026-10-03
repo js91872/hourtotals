@@ -4,3 +4,33 @@ h1{color:var(--blue)!important}
 .toolsMenu{position:relative;flex:0 0 auto}.toolsMenu summary{list-style:none;cursor:pointer;padding:11px 15px;border:1px solid #cddbeb;border-radius:9px;color:var(--navy);font-size:12px;font-weight:800;white-space:nowrap;user-select:none}.toolsMenu summary::-webkit-details-marker{display:none}.toolsMenu summary:hover,.toolsMenu[open] summary{border-color:#9fc4ed;background:#f7fbff}.toolsMenu summary span{display:inline-block;margin-left:5px;transition:transform .15s}.toolsMenu[open] summary span{transform:rotate(180deg)}.toolsDropdown{position:absolute;right:0;top:calc(100% + 10px);width:270px;padding:8px;background:#fff;border:1px solid var(--line);border-radius:11px;box-shadow:0 18px 45px rgba(24,55,92,.14);z-index:80}.toolsDropdown a{display:flex;align-items:center;justify-content:space-between;padding:10px 11px;border-radius:7px;font-size:12px;font-weight:750;color:#36516e}.toolsDropdown a:hover{background:#f2f7fd;color:var(--blue)}.toolsDropdown a span{color:#75a2d2}
 @media(max-width:820px){.toolsMenu{margin-left:auto}.toolsDropdown{position:fixed;right:12px;left:12px;top:76px;width:auto;max-height:calc(100vh - 95px);overflow:auto}}
 @media(max-width:580px){.toolsMenu summary{padding:9px 11px}.toolsDropdown{top:66px}}
+
+/* Mobile readability */
+@media(max-width:580px){
+  body{font-size:16px}
+  .toolsMenu summary{font-size:14px}
+  .toolsDropdown a{font-size:15px;padding:13px 12px}
+  .heroCopy>p,.hero p{font-size:16px;line-height:1.65}
+  .heroProof b{font-size:14px}.heroProof small{font-size:13px}
+  .sectionKicker,.eyebrow{font-size:11px}
+  .sectionHeading h2,.trustCopy h2{font-size:27px}
+  .portalCard h3,.portalCard h2{font-size:17px}
+  .portalCard p,.trustCopy p{font-size:15px;line-height:1.65}
+  .openTool,.trustLinks a{font-size:14px}
+  .trustPoints b{font-size:15px}.trustPoints small{font-size:13px;line-height:1.55}
+  .panelHead h2{font-size:20px}.panelHead p{font-size:14px;line-height:1.55}.safe{font-size:12px}
+  .field span,.controls label{font-size:14px}
+  input,select,button{font-size:16px}
+  th{font-size:11px}td{font-size:14px}
+  .legalNote{font-size:12px;line-height:1.55}
+  .stat span{font-size:12px}.stat strong{font-size:23px}
+  .confidenceBar b{font-size:13px}.confidenceBar small{font-size:12px;line-height:1.45}
+  .seoContent p,.faqSection summary{font-size:16px}
+  .seoContent h2{font-size:26px}
+  .exampleBox>span{font-size:11px}
+  .methodNote b{font-size:15px}.methodNote p{font-size:14px}
+  .relatedLinks a{font-size:14px}
+  .infoLead{font-size:18px;line-height:1.6}.infoArticle{font-size:16px}.infoArticle p{line-height:1.75}
+  .footerGrid>div:first-child>p{font-size:14px}.footerGrid b{font-size:14px}.footerGrid a:not(.brand){font-size:13px}
+  .footerTrust span{font-size:11px}.footerBottom{font-size:12px;line-height:1.5}
+}
