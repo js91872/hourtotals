@@ -1,0 +1,1 @@
+import type {MetadataRoute} from "next";import {pages} from "@/lib/pages";export default function sitemap():MetadataRoute.Sitemap{return [{url:"https://hourtotals.com",changeFrequency:"monthly",priority:1},...pages.map(p=>({url:`https://hourtotals.com/${p.slug}`,changeFrequency:"monthly" as const,priority:.8}))]}
