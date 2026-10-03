@@ -5,4 +5,4 @@ export function worked(a:string,b:string,br=0){const x=parseTime(a),y=parseTime(
 export function hm(n:number){const m=Math.round(Math.abs(n));return `${n<0?"−":""}${Math.floor(m/60)}h ${String(m%60).padStart(2,"0")}m`}
 export function clock(n:number){n=((Math.round(n)%1440)+1440)%1440;const h24=Math.floor(n/60),m=n%60,ap=h24>=12?"PM":"AM",h=h24%12||12;return `${h}:${String(m).padStart(2,"0")} ${ap}`}
 export function decimal(n:number){return (n/60).toFixed(2)}
-export function defaultRows():Row[]{return DAYS.map((day,i)=>({day,clockIn:i<5?"8:00 AM":"",clockOut:i<5?"5:00 PM":"",breakMinutes:i<5?30:0}))}
+export function defaultRows():Row[]{return DAYS.map((day,i)=>({day,clockIn:i<5?"08:00":"",clockOut:i<5?"17:00":"",breakMinutes:i<5?30:0}))}
