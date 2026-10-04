@@ -1,6 +1,6 @@
-# HourTotals
+# WorkTimeCheck
 
-Production source for **HourTotals.com**, a fast U.S.-focused time and work-hours calculator site.
+Production source for **WorkTimeCheck.com**, a fast U.S.-focused time and work-hours calculator site.
 
 ## Launch routes
 
