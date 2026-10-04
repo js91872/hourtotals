@@ -1,1 +1,1 @@
-import type {MetadataRoute} from "next";export default function robots():MetadataRoute.Robots{return{rules:{userAgent:"*",allow:"/"},sitemap:"https://hourtotals.com/sitemap.xml",host:"https://hourtotals.com"}}
+import type {MetadataRoute} from "next";export default function robots():MetadataRoute.Robots{return{rules:{userAgent:"*",allow:"/"},sitemap:"https://worktimecheck.com/sitemap.xml",host:"https://worktimecheck.com"}}
