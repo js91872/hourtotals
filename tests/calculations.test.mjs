@@ -1,0 +1,12 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {parseTime,worked,hm,clock,decimal,defaultRows} from '../src/lib/time.ts';
+import {duration,averageDuration,hms,payroll,pto} from '../src/lib/calculations.ts';
+test('clock parsing validates AM/PM and 24-hour boundaries',()=>{assert.equal(parseTime('12:00 AM'),0);assert.equal(parseTime('12:00 PM'),720);assert.equal(parseTime('23:59'),1439);for(const v of ['', '24:00','12:60','0:30 PM','abc'])assert.equal(parseTime(v),null)});
+test('overnight, lunch, equal times, zero and excessive breaks',()=>{assert.equal(worked('22:00','06:00',30),450);assert.equal(worked('08:00','17:00',60),480);assert.equal(worked('08:00','08:00'),0);assert.equal(worked('08:00','09:00',90),0);assert.equal(worked('','09:00'),0)});
+test('conversion and display round only at output',()=>{assert.equal(decimal(465),'7.75');assert.equal(hm(7.75*60),'7h 45m');assert.equal(hm(-90),'−1h 30m');assert.equal(clock(1440+60),'1:00 AM');assert.equal(hm(59.6),'1h 00m');assert.equal(decimal(1),'0.02')});
+test('duration parsing includes seconds and rejects invalid values',()=>{assert.equal(duration('1:30:15'),5415);assert.equal(duration('1:30'),5400);assert.equal(duration('1.5'),90);for(const v of ['', '-1','1:60','1:30:60','NaN'])assert.equal(duration(v),null)});
+test('averaging excludes blanks and includes zero',()=>{assert.equal(averageDuration(['0:00:00','0:00:01','']),.5);assert.equal(hms(3599.6),'1h 00m 00s');assert.equal(averageDuration(['','']),null);assert.equal(averageDuration(['bad','1']),null);assert.equal(averageDuration(['0','2']),60)});
+test('weekly and biweekly overtime calculated independently',()=>{const rows=[2700,0,0,0,0,0,0,2100,0,0,0,0,0,0];const r=payroll(rows,40,1.5,20);assert.equal(r.total,4800);assert.equal(r.overtime,300);assert.equal(r.pay,1650);assert.deepEqual(r.weeks,[2700,2100]);assert.equal(payroll([600],8,2,10).pay,120);assert.equal(payroll([]).total,0)});
+test('default weekly totals include lunch',()=>{assert.equal(payroll(defaultRows().map(r=>worked(r.clockIn,r.clockOut,r.breakMinutes))).total,2550)});
+test('PTO annual allowance, accrual, deficits and zero workday',()=>{assert.deepEqual(pto(40,104/26,6,16,8),{earned:24,balance:48,days:6});assert.ok(Math.abs(pto(24,3.08,10,8,8).balance-46.8)<1e-10);assert.equal(pto(0,0,0,8,8).balance,-8);assert.equal(pto(0,0,0,0,0).days,null)});
