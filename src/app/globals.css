@@ -73,3 +73,15 @@ input,select,button{min-height:44px} .inputWarning{display:block;font-size:.8rem
 .result .ghost{font-size:.875rem;margin-top:12px}.result small{display:block}.fields{align-items:start}
 @media(max-width:640px){.hero{padding:26px 0}.hero h1{font-size:2rem}.fields,.fields.four{grid-template-columns:repeat(2,minmax(0,1fr))}.field{min-width:0}.field input,.field select{width:100%;min-width:0}.controls{align-items:stretch;gap:12px}.controls>div{display:flex;flex-wrap:wrap;gap:8px}.result strong{overflow-wrap:anywhere}.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.toolsDropdown{max-height:75vh;overflow:auto}}
 @media print{.header,footer,.skipLink,.hero,.confidenceBar,.seoContent,.relatedSection,.controls button,.result button{display:none!important}.wrap{max-width:none;width:100%}.scroll{overflow:visible}table{width:100%;font-size:10pt}input{border:0!important;min-width:0!important;width:100%!important}.calculatorPanel{break-inside:auto}.stats{break-inside:avoid}body{background:#fff!important;color:#000!important}}
+/* Keep the brand and disclosure within small device widths. */
+@media(max-width:580px){
+ .wrap{width:min(1200px,calc(100% - 24px))}
+ .nav{gap:8px;justify-content:space-between}
+ .header .brand{flex:0 1 auto;gap:8px;min-width:0}
+ .header .brandMark{width:36px;height:36px;flex:0 0 36px}
+ .header .brandText strong{font-size:clamp(18px,5.8vw,24px)}
+ .toolsMenu{margin-left:0}
+ .toolsMenu summary{font-size:13px;padding:10px}
+ .toolsDropdown a{min-width:0;gap:8px;overflow-wrap:anywhere}
+ .toolsDropdown a span{flex-shrink:0}
+}

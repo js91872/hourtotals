@@ -13,7 +13,7 @@ Technical changes include canonical inheritance cleanup, matching visible/schema
 ## Commits and validation
 
 - `fd32d398d3a1e0524f79fabce5461931a318639b`: calculator, content-cluster and technical SEO implementation. GitHub Actions run 39909702058 passed install, tests, TypeScript and production build.
-- `5991edc5282ff2fbdfbfc6e5aa0a9d68c3236f55`: expanded metadata, presets and Chromium mobile regression suite. Head CI verification pending at report creation.
+- `5991edc5282ff2fbdfbfc6e5aa0a9d68c3236f55`: expanded metadata, presets and Chromium mobile regression suite. TypeScript and production build passed in run 39909988954. Browser tests exposed shared header overflow (18 route failures; 3 interaction checks passed); the release fix reduces mobile brand size and retains the strict overflow assertion. Final-head CI outcome follows below.
 - Reporting commit follows these implementation commits; its own hash is available in the PR history rather than embedded recursively in this file.
 
 Local calculation tests: 8 passed. Local SEO/source checks: 4 passed. Local dependency installation/build unavailable because of workspace networking; remote CI is the build evidence. Browser tests must be confirmed on the current head before release.

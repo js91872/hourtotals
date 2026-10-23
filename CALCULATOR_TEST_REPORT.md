@@ -17,3 +17,5 @@ Browser suite includes 18 mobile route checks plus deletion/retyping, next-day c
 `npm install` failed through the workspace proxy. Local `npm run typecheck` and `npm run build` were attempted and could not run because `tsc`/`next` were absent. The local test command uses native TypeScript stripping and needs no dependencies. GitHub Actions supplies build dependencies.
 
 No live Core Web Vitals, screen-reader session, printed-PDF visual inspection or production crawl has been performed.
+
+Run 39909988954: install, unit/source tests, TypeScript and build passed. Browser suite: 3 interaction checks passed; 18 route checks failed due to a shared header extending to 400px on a 375px viewport. Diagnostic run 39910246684 isolated the tools disclosure. A narrow-header fix was implemented; the overflow assertion remains strict.
