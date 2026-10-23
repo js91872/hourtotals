@@ -23,3 +23,7 @@ Run 39909988954: install, unit/source tests, TypeScript and build passed. Browse
 ## Final application-code verification
 
 Commit `4f05eaf617bbbbdfb05acc9007da18f32b738092`, [CI run 39910480557](https://github.com/js91872/hourtotals/actions/runs/39910480557): all steps succeeded, including installation, unit/source tests, TypeScript, production build and Chromium installation/tests. Browser results: **21 passed, 0 failed**. Build: **38/38 static pages generated**. The mobile route checks retain the strict document-width assertion and all 18 pass after the header correction. Subsequent changes are documentation only.
+
+## PR #2 hardening regression coverage
+
+Local execution: 8 existing calculation tests + 5 hardening calculation tests + 4 source SEO tests passed (17 total). The new suite verifies incomplete/invalid numeric parsing versus valid zero, strict shift validation, invalid CSV rejection, downloaded CSV content, biweekly overtime and PTO modes. Existing tests now use validated unused rows rather than treating missing clock values as worked zero. Expanded Chromium suite is pending CI at this entry's creation; final results are in the release report.

@@ -10,7 +10,7 @@ Next.js 16 App Router, React 19, TypeScript, custom CSS. Eighteen calculator rou
 
 | Priority | Finding in original source | Action |
 | --- | --- | --- |
-| P1 | Numeric state coercion turns an empty field immediately into zero | Editable text field with visible empty/invalid explanation; retain last valid numeric model until corrected |
+| P1 | Numeric state coercion turns an empty field immediately into zero | Editable text field with visible empty/invalid explanation; invalidate the model and suppress results until corrected |
 | P1 | Average calculator accepts only five minute values and rounds to whole minutes | Variable entries, H:MM:SS/H:MM/minutes, second precision; blanks excluded, zeros included |
 | P1 | Vacation and PTO projections hide shortfalls using a zero clamp | Display negative projections; annual allowance and typical accrual schedules |
 | P1 | Time-card overtime fixed at 40 hours and 1.5 multiplier | Configurable assumptions, each seven-day week calculated independently |
@@ -29,7 +29,7 @@ Next.js 16 App Router, React 19, TypeScript, custom CSS. Eighteen calculator rou
 
 Original clock parsing correctly validates 12/24-hour inputs, and shift logic handles one midnight crossing. Default weekdays total 42h 30m after lunch. Decimal conversion divides by 60 correctly. Biweekly overtime already evaluated each week separately; this behavior is preserved and tested. Addition/subtraction correctly normalize minutes and preserve negative differences. No change to correct math was required merely for SEO.
 
-Same start/end means zero; clock tools do not model dates, DST or time zones. Excess breaks reduce paid time to zero with a warning. Billable hours remain capped at worked hours and collection estimates are limited to 0–100. PTO caps, carryover and employment eligibility remain policy-dependent.
+Same start/end means zero; clock tools do not model dates, DST or time zones. Excess breaks invalidate the shift and block payroll totals and exports. Billable hours remain capped at worked hours and collection estimates are limited to 0–100. PTO caps, carryover and employment eligibility remain policy-dependent.
 
 ## What source review cannot establish
 

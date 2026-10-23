@@ -85,3 +85,6 @@ input,select,button{min-height:44px} .inputWarning{display:block;font-size:.8rem
  .toolsDropdown a{min-width:0;gap:8px;overflow-wrap:anywhere}
  .toolsDropdown a span{flex-shrink:0}
 }
+.validationSummary{padding:14px 24px;color:#8b280d;background:#fff4ed;line-height:1.6}
+button:disabled{opacity:.55;cursor:not-allowed}
+.result strong{overflow-wrap:anywhere}
