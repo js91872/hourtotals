@@ -20,6 +20,7 @@ Next.js 16 App Router, React 19, TypeScript, custom CSS. Eighteen calculator rou
 | P2 | Generic related-links list omits lunch and biweekly tools | Five coherent clusters and focused related links including every route |
 | P2 | FAQPage markup on a general calculator site | Remove FAQ markup; keep visible FAQ content. Retain accurate app schema and add matching breadcrumb schema |
 | P2 | Daily time inputs have no individual accessible labels | Day-specific accessible labels, caption, scoped table headings |
+| P2 | Mobile header extended to 400px at a 375px viewport in Chromium | Reduce narrow-header brand size and spacing; all 18 route overflow checks now pass |
 | P2 | No skip link; application-menu roles without menu keyboard handling | Skip link and native disclosure navigation |
 | P2 | No copy/CSV options; limited print styles | Copy results, CSV time-card export, improved printable records |
 | P3 | No mathematical regression tests | Node calculation and source-SEO tests; Chromium mobile tests in CI |

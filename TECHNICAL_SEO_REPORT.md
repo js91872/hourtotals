@@ -15,7 +15,7 @@
 
 ## Verification and boundaries
 
-Twelve local calculation/source checks pass. The first implementation commit passed GitHub Actions install, tests, TypeScript and production build (run 39909702058). Subsequent browser-test/content changes require their own head validation; see final report.
+Twelve local calculation/source checks pass. The first implementation commit passed GitHub Actions install, tests, TypeScript and production build (run 39909702058). Final application-code commit `4f05eaf617bbbbdfb05acc9007da18f32b738092` passed run 39910480557: tests, TypeScript, production build (38 static pages) and all 21 Chromium checks.
 
 Source-level literal links and all cluster/guide routes are checked. Browser checks cover every calculator at a 375px viewport, one H1, canonical, title, native navigation, page overflow, editable fields and key results. These are not substitutes for a full assistive-technology audit.
 

@@ -19,3 +19,7 @@ Browser suite includes 18 mobile route checks plus deletion/retyping, next-day c
 No live Core Web Vitals, screen-reader session, printed-PDF visual inspection or production crawl has been performed.
 
 Run 39909988954: install, unit/source tests, TypeScript and build passed. Browser suite: 3 interaction checks passed; 18 route checks failed due to a shared header extending to 400px on a 375px viewport. Diagnostic run 39910246684 isolated the tools disclosure. A narrow-header fix was implemented; the overflow assertion remains strict.
+
+## Final application-code verification
+
+Commit `4f05eaf617bbbbdfb05acc9007da18f32b738092`, [CI run 39910480557](https://github.com/js91872/hourtotals/actions/runs/39910480557): all steps succeeded, including installation, unit/source tests, TypeScript, production build and Chromium installation/tests. Browser results: **21 passed, 0 failed**. Build: **38/38 static pages generated**. The mobile route checks retain the strict document-width assertion and all 18 pass after the header correction. Subsequent changes are documentation only.
