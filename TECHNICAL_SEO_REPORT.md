@@ -20,3 +20,7 @@ Twelve local calculation/source checks pass. The first implementation commit pas
 Source-level literal links and all cluster/guide routes are checked. Browser checks cover every calculator at a 375px viewport, one H1, canonical, title, native navigation, page overflow, editable fields and key results. These are not substitutes for a full assistive-technology audit.
 
 No HTTP-to-HTTPS or www redirect change was made: the host configuration is not in this repository and live behavior could not be verified through the failed workspace proxy. Do not assume a missing redirect from absent app configuration. Verify at the hosting edge before release. GSC index coverage and Core Web Vitals remain unmeasured; no Lighthouse score or performance improvement percentage is claimed. The site already uses server-rendered content, system fonts and no new client libraries were added.
+
+## Release-hardening recheck
+
+Run 39913002276 passed 42 Chromium tests, including rendered calculator/guide canonicals, sitemap entries, robots sitemap declaration, 320/375/768px page width checks, keyboard skip navigation and error-message associations. Static metadata/link checks remain green. Numeric editing no longer retains a stale valid model; invalid time cards block payroll totals and exports. These checks do not establish live host redirects, GSC coverage, real-user CWV or full assistive-technology compliance.
